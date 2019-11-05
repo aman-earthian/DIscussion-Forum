@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+<div >
+    <div ><%=forum.question%> </div>
+    <div >
+        <div >
+            <img src="<%= forum.image%>" >
+            <div ><span><%= forum.created.toDateString()%></span></div>
+            <div >
+                <p><%= forum.answer%></p>
+            </div>
+
+            <a href="/forums/<%=forum._id%>/edit">Edit</a>
+            <form id="delete" action="/forums/<%=forum._id%>?_method=DELETE" method="POST">
+                <button>Delete</button>
+            </form>
+        </div>
+    </div>  
+</div>
+<% include ./partials/footer %>

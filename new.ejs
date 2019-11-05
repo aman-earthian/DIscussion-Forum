@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+<div >
+   
+
+        <p align="center" ><font face="Comic Sans MS" color="red" size="25">ADD A NEW QUESTION</font></p>
+        <form id="form1" action="/forums" method = "POST">
+            <div>
+                <label >Question</label>
+                <input type="text" name="forum[question]" placeholder="Question goes here">
+            </div>
+            <div>
+                <label >Image</label>
+                <input type="url" name="forum[image]" placeholder="image">
+            </div>
+            <div>
+                <label >Body of the blog</label> <br> 
+                <textarea name="forum[answer]" rows="10" cols="50"></textarea>
+            </div>
+            
+            <input type="submit" value="ADD QUESTION">
+        </form>
+</div>
+
+<% include ./partials/footer %>
