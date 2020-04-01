@@ -1,24 +1,24 @@
 <% include ./partials/header %>
 <div >
-    <div >
-        Edit Answer
-    </div>
+    <div ><font color="white" face="Comic Sans MS" size="8">
+        <u>Edit Answer</u></font>
+    </div><br>
 
     <form  action="/forums/<%=forum._id%>?_method=PUT" method = "POST">
 
         <div >
-            <label >Title</label>
-            <input type="text" name="forum[title]" value="<%= forum.title%>">
+            <label ><font color="white" face="Comic Sans MS" size="5">Title:-</font></label>
+            <input type="text" name="forum[question]" value="<%= forum.question%>">
         </div>
         <div >
-            <label >Image</label>
+            <label ><font color="white" face="Comic Sans MS" size="5">Image:-</font></label>
             <input type="text" name="forum[image]" value="<%= forum.image%>">
         </div>
         <div >
-            <label >Body of the blog</label>
-            <textarea name="forum[forum]" ><%= forum.body%></textarea>
-        </div>
-        <input class="ui violet big basic button" type="submit">
+            <label><font color="white" face="Comic Sans MS" size="5">Body of the QUESTION:-</font></label>
+            <textarea name="forum[forum]" ><%= forum.answer%></textarea>
+        </div><br><br>
+        <input class="ui violet big basic button" type="submit" style="background-color: black;color:blanchedalmond;font-size: 20px;">
     </form>
 </div>
 

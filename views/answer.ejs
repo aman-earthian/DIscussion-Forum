@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<div >
+   
+
+        <p align="center" ><font face="Comic Sans MS" color="white" size="25"><u>ADD ANSWER</u></font></p>
+        <form id="form1" action="/forums/<%=forum._id%>" method = "POST">
+            <div>
+                <label >QUESTION:-</label> <br> 
+                <textarea name="forum[question]" rows="10" cols="50"><%= forum.question%></textarea>
+            </div><br>
+            <div>
+                <label >ANSWER:-</label> <br> 
+                <textarea name="forum[forum]" rows="10" cols="50"></textarea>
+            </div><br>
+            
+            <input type="submit" value="ADD ANSWER" style="color: beige;background-color: black;font-size: 20px;">
+        </form>
+</div>
+
+<% include ./partials/footer %>

@@ -1,14 +1,15 @@
 <% include ./partials/header %>
 
-<h1>Home Page</h1>
+<h1 style="color: white;">Home Page</h1>
 
 <% forums.forEach(function(forum){ %>
-    <div >
+    <div id="pad" >
         <h2><%= forum.question%></h2>  
-        <img src="<%= forum.image%>" >
+        <img src="<%= forum.image%>" width="250" height="200" style="transform: translate(20px,0px);"><br>
         <span><%= forum.created%></span>
-        <p><%= forum.answer%>....</p>  
-        <a href="/forums/<%=forum._id%>"> Read More</a>
+         <p><%= forum.answer%></p>  
+        <a href="/forums/<%=forum._id%>" style="color: beige;background-color: black;font-size: 20px; border: solid white 2px;"> Read More</a>
+        <a href="/forums/<%=forum._id%>/answer" style="color: beige;background-color: black;font-size: 20px; border: solid white 2px;"> Answer</a>
     </div>
 <% }) %>
 

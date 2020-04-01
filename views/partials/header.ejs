@@ -1,16 +1,113 @@
 <html>
     <head>
         <title>The Discussion Forum</title>
-        <link rel="stylesheet" type="text/css" src="app.css">
+      <style>
+          #a{
+    background-image: url(img5.jpeg);
+    background-repeat: no-repeat;
+}
+.topnav{
+  background-color:transparent;
+  font-size: 15px;
+  height: 100px;
+}
+#par{
+transform: translate(120px,-80px);
+font-size: 18px;
+}
+.av{
+font-family:Comic Sans MS;
+color:white;
+text-decoration: none;
+}
+.av:hover{
+      color:red;
+      font-size: 20px;
+      }
+#abc{
+padding-right:380px;
+}
+#xyz{
+border-radius: 50px;
+}
+#b{
+    background-image: url(img4.jpeg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+  .test{
+    position: relative;
+    width:300px;
+    height:250px;
+    background:lightblue;
+    transform: translate(250px,0px);
+    border-radius:30px;
+  }
+  .para{
+    transform: translate(80px,20px);
+    font-family: Comic Sans MS;
+    color: black;
+  }
+  #c{
+   
+    background-image: url(https://hdwallsource.com/img/2014/9/free-3d-backgrounds-17302-17858-hd-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #pad{
+    border:5px solid #bdc3c7;
+    padding: 20 px;
+    margin: 5 px auto;
+    width: 50%;
+    height: auto;
+    transform: translate(300px ,0);
+    color: white;
+    text-align: center;
+  }
+  #form1{
+    font-family:"Comic Sans MS";
+    font-size: 30px;
+    color: white;
+    transform: translate(480px,0px);
+  }
+  #d{
+    background-image: url(img2.jpeg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+#form2{
+    font-family:"Comic Sans MS";
+    color: black;
+    transform: translate(460px,0px);
+  }
+  #e{
+    background-image: url(img3.jpeg);
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
+#form3{
+    font-family:"Comic Sans MS";
+    color: black;
+  }
+        </style> 
+
     </head>
     <body id="c" >
         <div class="topnav">
-           <p>
-            <img src="logo.jpeg" height="25" width="25" style="border-radius:50px;">
+            <img src="https://dynamic.brandcrowd.com/asset/logo/cc3acc60-8b75-4fde-a594-d8733e6c7f02/logo?v=4&text=discussion+forum" height="90" width="90" style="border-radius:50px;">
+           <p id = "par">
+            
             <a class="av" href="/forums">HOME&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <a class="av" href="/forums/new" style="padding-right:700px;">ADD QUESTION&nbsp;&nbsp;&nbsp;&nbsp;</a>
             <a class="av" href="/forums/meet">MEET THE TEAM&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a class="av" href="/forums/new" style="padding-right:380px;">ADD QUESTION</a>
-            <a class="av" href="/forums">CREATE ACCOUNT&nbsp;&nbsp;&nbsp;&nbsp;</a>
-            <a class="av" href="/forums">LOGIN TO ACCOUNT</a>
+            <% if(!currentUser){%>
+              <a class="av" href="/register">Sign Up&nbsp;&nbsp;</a>
+              <a class="av" href="/login">Login&nbsp;&nbsp;</a>
+            <%} else{%>
+              <a class="av" href="#">Signed In As <%= currentUser.username%>&nbsp;&nbsp;</a>
+              <a class="av" href="/logout">LogOut</a>
+            <%}%>
+            
           </p>
         </div>
+        <hr size="5">

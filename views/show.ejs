@@ -1,18 +1,26 @@
 <% include ./partials/header %>
-<div >
-    <div ><%=forum.question%> </div>
+<div id="pad" >
+    <div style="font-size: 25px; color: blanchedalmond; text-align: center;"><%=forum.question%> </div>
     <div >
         <div >
-            <img src="<%= forum.image%>" >
+            <img src="<%= forum.image%>" width="500" height="450" style="transform: translate(20px,0);" >
             <div ><span><%= forum.created.toDateString()%></span></div>
             <div >
                 <p><%= forum.answer%></p>
             </div>
+<!-- 
+            <a href="/forums/<%=forum._id%>/edit">Edit</a> -->
 
-            <a href="/forums/<%=forum._id%>/edit">Edit</a>
+            <form action="/forums/<%=forum._id%>/edit" method="get">
+                <input type="submit" value="Edit" 
+                     name="Edit">
+            </form>
+
             <form id="delete" action="/forums/<%=forum._id%>?_method=DELETE" method="POST">
                 <button>Delete</button>
             </form>
+            <a href="/forums/<%=forum._id%>/answer" style="color: beige;background-color: black;font-size: 20px; border: solid white 2px;"> Answer</a>
+
         </div>
     </div>  
 </div>
